@@ -50,9 +50,8 @@ void unsuccessful() {
  int inc;
 std::list<int> table = {};
 std::list<std::string> dependencies = {"iostream", "string", "cstdlib", "list"};
-std::string update = "Added the feature to show future update (number) and current update";
-double version = 0.6;
-std::string next_update = "Beta";
+std::string update = "Turned the VM into a .hpp module.";
+double version = 0.7;
 
 void exec(std::string opcode) {
 	std::cout << "\n";
@@ -116,19 +115,7 @@ void exec(std::string opcode) {
     }
 }
 
-void loop() {
-	std::cout << "=========================\nVersion: v" << version << "\nUse '0--' to exit.\n=========================\n", version;
-	while(1) {
-		std::cout << "\n>>> ";
-		std::string command;
-		std::getline(std::cin, command);
-		if(command.empty()) {
-			unsuccessful();
-			std::exit(0);
-		} else {
-			exec(command);
-		}
-	}
-}
+void _main() {
+	std::cout << "[SYSTEM] Usage: #include \"svm.hpp"\ << "\n" << "[SYSTEM] Use inside script (x = any opcode): svm::exec(x) Or, by writing \"using namespace svm;"\: << "\n" << "exec(x);";
 }
 #endif
