@@ -1,5 +1,5 @@
 #include "svm.hpp"
-// This demonstrates all system commands of the VM.
+// Hello World. It took 20 lines of Python to write the hello world generator.
 int main() {
 	svm::exec_multiple({
 "0++",
