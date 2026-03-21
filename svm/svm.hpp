@@ -47,13 +47,12 @@ void unsuccessful() {
 	std::cout << "[SYSTEM] Process was unsuccessful.";
 }
 
- int inc;
+int inc;
 std::list<int> table = {};
 std::list<std::string> dependencies = {"iostream", "string", "cstdlib", "list"};
-std::string update = "Turned the VM into a .hpp module.";
-double version = 0.7;
-
-void exec(std::string opcode) {
+std::string update = "Added the option to execute a list of opcodes instead of one at a time. Usage: exec_multiple(list)";
+double version = 0.8;
+void exec_single(std::string opcode) {
 	std::cout << "\n";
 	if(opcode == "0--") {
 	       std::cout << "[SYSTEM] Exiting...\n";
@@ -115,7 +114,24 @@ void exec(std::string opcode) {
     }
 }
 
-void _main() {
-	std::cout << "[SYSTEM] Usage: #include \"svm.hpp"\ << "\n" << "[SYSTEM] Use inside script (x = any opcode): svm::exec(x) Or, by writing \"using namespace svm;"\: << "\n" << "exec(x);";
+void repl() {
+	std::cout << "=========================\nVersion: " << version << "\nUse '0--' to exit.\n=========================\n", version;
+	while(1) {
+		std::cout << "\n>>> ";
+		std::string command;
+		std::getline(std::cin, command);
+		if(command.empty()) {
+			unsuccessful();
+			std::exit(0);
+		} else {
+			exec_single(command);
+		}
+	}
+}
+void exec_multiple(std::list<std::string> commands) {
+	for(std::string command : commands) {
+		exec_single(command);
+	}
+}
 }
 #endif
