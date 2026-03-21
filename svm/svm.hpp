@@ -50,7 +50,7 @@ void unsuccessful() {
 int inc;
 std::list<int> table = {};
 std::list<std::string> dependencies = {"iostream", "string", "cstdlib", "list"};
-std::string update = "Added the option to execute a list of opcodes instead of one at a time. Usage: exec_multiple(list)";
+std::string update = "[SYSTEM] Added the option to execute a list of opcodes instead of one at a time. Usage: exec_multiple(list)";
 double version = 0.8;
 void exec_single(std::string opcode) {
 	std::cout << "\n";
@@ -70,18 +70,19 @@ void exec_single(std::string opcode) {
         	std::cout << "[SYSTEM] Your operating system is not supported." << "\n";
         #endif
     } else if(opcode == "2--") {
-    	std::cout << __cplusplus << "\n";
+    	std::cout << "[SYSTEM] \n" << __cplusplus << "\n";
     } else if(opcode == "3--") {
-    	system("echo '[SYSTEM]'");
+    	system("echo '[SYSTEM] '");
     	system("hostname");
     } else if(opcode == "4--") {
-    	std::cout << __FILE__ << "\n";
+    	std::cout << "[SYSTEM] \n" << __FILE__ << "\n";
     } else if(opcode == "5--") {
+    	std::cout << "[SYSTEM] " << "\n";
     	for(std::string i : dependencies) {
     		std::cout << i << "\n";
     	}
     } else if(opcode == "6--") {
-    	std::cout << "Update:" << update << "\n" << "Version Number: " << version << "\n";
+    	std::cout << "[SYSTEM] Update:" << update << "\n" << "[SYSTEM] " << "Version Number: " << version << "\n";
     } else if(opcode == "0++") {
     	inc++;
     } else if(opcode == "1++") {
@@ -89,10 +90,10 @@ void exec_single(std::string opcode) {
     } else if(opcode == "2++") {
     	inc = inc / 2;
     } else if(opcode == "3++") {
-    	std::cout << inc << "\n";
+    	std::cout << "[SYSTEM] " << inc << "\n";
     } else if(opcode == "4++") {
     	char ascii = inc;
-    	std::cout << ascii << "\n";
+    	std::cout << "[SYSTEM] " << ascii << "\n";
     } else if(opcode == "5++") {
     	inc = inc * 2;
     } else if(opcode == "0==") {
@@ -100,6 +101,7 @@ void exec_single(std::string opcode) {
     } else if(opcode == "1==") {
     	table.push_back(inc);
     } else if(opcode == "2==") {
+    	std::cout << "[SYSTEM] " << "\n";
     	for(char i : table) {
     		std::cout << i << " ";
     	}
@@ -107,6 +109,7 @@ void exec_single(std::string opcode) {
     } else if(opcode == "3==") {
     	table = {};
     } else if(opcode == "4==") {
+    	std::cout << "[SYSTEM] ";
     	for(int i : table) {
     		std::cout << i << " ";
     	}
