@@ -10,6 +10,7 @@ def main(text):
 		print('"6==", ')
 		x.append("6==")
 		print('"6++", ')
+		x.append("6++")
 	print('"2=="')
 	x.append("2==")
 	print("}")
