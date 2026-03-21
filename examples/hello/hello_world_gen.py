@@ -1,4 +1,3 @@
-text = "Hello World"
 x = []
 def main(text):
 	print("{")
