@@ -13,6 +13,7 @@ x== : Table commands
 4-- : Print current file \
 5-- : List dependencies \
 6-- : See current update number and features
+7-- : Start REPL
 
 0++ : Increment inc by 1 \
 1++ : Decrement inc by 1 \
