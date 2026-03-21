@@ -12,7 +12,7 @@ x== : Table commands
 3-- : Print hostname \
 4-- : Print current file \
 5-- : List dependencies \
-6-- : See current update number and features
+6-- : See current update number and features \
 7-- : Start REPL
 
 0++ : Increment inc by 1 \
