@@ -7,3 +7,7 @@ The current plan for STAR-7 is to make it a library and stem away from it being 
 **A: I won't make it natively supported, more as a tool for the library.** \
 **Q: Will you ever rewrite the VM?** \
 **A: I could rewrite it as a seperate project in most languages I know, but they are significantly slower than C++.**
+## Version History
+### v0.8 - STAR-7 becomes open source.
+### v0.9 - STAR-7 is made modular into seperate .hpp libraries.
+### v1.0 - STAR-7's library ecosystem has a new library (files.hpp) that handles executing scripts.
