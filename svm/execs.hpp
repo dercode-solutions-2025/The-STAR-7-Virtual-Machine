@@ -11,7 +11,7 @@ int inc;
 std::list<int> table = {};
 std::list<std::string> dependencies = {"iostream", "string", "cstdlib", "list"};
 std::string update = "[SYSTEM] Made the entire VM and library modular.\n<Usage>: svm::_main({command}) or svm::_main({command1, command2, command3})";
-double version = 0.9;
+double version = 1.0;
 void exec_single(std::string opcode) {
 	std::cout << "\n";
 	if(opcode == "0--") {
