@@ -3,7 +3,7 @@
 #define UTILS_HPP
 namespace utils {
 void success() {
-	std::cout << "[SYSTEM] Process was successful." << "\n;
+	std::cout << "[SYSTEM] Process was successful." << "\n";
 }
 
 void insuccess() {
